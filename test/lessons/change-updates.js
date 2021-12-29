@@ -6,7 +6,7 @@ const MAX_LOAN_AMOUNT = 100000
 ;(async function() {
   const client = await MongoClient.connect(
     process.env.MFLIX_DB_URI,
-    { wtimeout: 2500, poolSize: 50, useNewUrlParser: true },
+    { wtimeout: 2500, poolSize: 50, useNewUrlParser: true, useUnifiedTopology: true },
   )
 
   /**

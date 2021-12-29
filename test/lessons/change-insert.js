@@ -4,7 +4,7 @@ require("dotenv").config()
 ;(async function() {
   const client = await MongoClient.connect(
     process.env.MFLIX_DB_URI,
-    { wtimeout: 2500, poolSize: 50, useNewUrlParser: true },
+    { wtimeout: 2500, poolSize: 50, useNewUrlParser: true, useUnifiedTopology: true },
   )
 
   /**
