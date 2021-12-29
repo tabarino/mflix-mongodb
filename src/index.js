@@ -26,7 +26,8 @@ concern timeout limit to 2500 milliseconds.
 MongoClient
   .connect(process.env.MFLIX_DB_URI, {
     useNewUrlParser: true,
-    poolSize: 50
+    poolSize: 50,
+    wtimeout: 2500
   })
   .catch(err => {
     console.error(err.stack)
